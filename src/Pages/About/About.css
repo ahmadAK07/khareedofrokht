@@ -11,3 +11,8 @@
     color: var(--secondary-color);
     /* color: gray; */
 }
+@media screen and (max-width: 769px) {
+    .about ul.about-list{
+        text-align: center;
+    }
+}
