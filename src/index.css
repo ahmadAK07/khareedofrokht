@@ -11,6 +11,10 @@
   --background-color: #333;
   --text-color: white;
 }
+::selection{
+  background: white;
+  color: var(--primary-color);
+}
 .kanit-bold {
   font-family: "Kanit", sans-serif;
   font-weight: 900;
@@ -77,8 +81,15 @@
 .text-center{
   text-align: center;
 }
+
 .py-30{
   padding: 30px 0px;
+}
+.border{
+  border: 1px solid black;
+}
+.seperator-b{
+  border-bottom: .5px solid rgba(0, 0, 0,0.09);
 }
 @media screen and (max-width: 1024px) {
   .display-1{

@@ -1,10 +1,7 @@
-import React from "react";
-import Hero from "../../Components/Hero/Hero";
-import "./Home.css"
+import React from 'react'
+import Products from '../../Components/Products/Products'
 
-import Products from "../../Components/Products/Products";
-const Home = () => {
-  
+const AllProducts = () => {
   let productList = [
     {
       url: "./product-1.jpg",
@@ -49,11 +46,9 @@ const Home = () => {
   ];
   return (
     <div>
-      <Hero />
-
-     <Products productList={productList} title={"Products"}/>
+      <Products productList={productList} title={"All Products"}/>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default AllProducts

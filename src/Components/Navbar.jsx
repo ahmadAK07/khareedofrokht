@@ -22,7 +22,7 @@ const Navbar = () => {
 
 
       {/* cart -------- */}
-      <a href="#" className='nav-cart'> <FaCartShopping /> </a>
+      <Link to={"cart"} className='nav-cart'> <FaCartShopping /> </Link>
       <button className='btn nav-toggler' onClick={()=>{setNavToggleVal(!navToggleVal)}}> {!navToggleVal ? <BiMenu /> :  <IoCloseSharp /> }   </button>
      </div>
      <div className="sub-nav-container" style={{transform: !navToggleVal ? "translateX(-300px)" : "translateX(0px)"}}>

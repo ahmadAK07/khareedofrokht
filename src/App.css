@@ -57,10 +57,109 @@ a.nav-logo img:hover {
 footer {
   background: orangered;
   color: white;
-  text-align: center;
-  padding: 100px;
-  font-size: 40px;
   font-family: "Poppins";
+}
+.footer{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 0px;
+}
+.footer-first{
+  width: 40%;
+}
+.footer-first-list{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 8px;
+}
+.footer-first__link{
+  color: white;
+  text-decoration: none;
+  font-family: "Poppins";
+}
+.footer-first__link:hover{
+  color: var(--secondary-color);
+}
+.footer-second{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: start;
+  padding: 0px 20px;
+
+}
+.footer-second__input{
+  display: flex;
+  align-items: center;
+  border-radius:2px;
+  overflow: hidden;
+  width: 460px;
+  margin-top: 20px;
+}
+.footer-second__input input{
+  width: 70%;
+  font-size: 18px;
+  padding: 10px;
+  border: 2px solid transparent;
+  outline: none;
+}
+.footer-second__input button{
+  width: 30%;
+  font-size: 18px;
+  color: var(--primary-color);
+  padding: 10px;
+  background: var(--text-color);
+  transition: all .5s;
+  letter-spacing: 1px;
+  border: 2px solid transparent;
+}
+.footer-second__input button:hover{
+  background: var(--primary-color);
+  border-color: white;
+  color: white;
+}
+
+.footer-bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+}
+.footer-social{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 100%;
+}
+.footer-social a{
+  color: white;
+  transition: all .5s;
+  font-size: 40px;
+}
+.footer-social a:hover{
+  text-shadow: 0px 0px 100px white;
+  transform: translateY(-5px);
+}
+@media screen and (max-width: 1024px) {
+  .footer{
+    flex-direction: column;
+    gap: 50px;
+  }
+  .footer-second{
+    order: 1;
+    padding: 0px;
+    width: 100%;
+  }
+  .footer-first{
+    order: 2;
+    width: 100%;
+  }
+  .footer-second__input{
+    width: 460px;
+  }
 }
 @media screen and (max-width: 769px) {
     .nav-container{
@@ -108,5 +207,26 @@ footer {
   .sub-nav-link:hover {
     box-shadow: inset 0px 0px 50px var(--primary-color);
     color: var(--text-color);
+  }
+  .footer-second__input{
+    width: 100%;
+    gap: 5px;
+    flex-direction: column;
+  }
+  .footer-second__input input{
+    width: 100%;
+    font-size: 16px;
+    padding: 8px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+
+  }
+  .footer-second__input button{
+    width: 100%;
+    font-size: 16px;
+    padding: 8px;
+    min-width: 200px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
   }
 }
