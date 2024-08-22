@@ -5,3 +5,8 @@
     background-size: cover;
     transition: all .5s;
 }
+@media screen and (max-width: 769px) {
+    .hero{
+        height: 400px;
+    }
+}

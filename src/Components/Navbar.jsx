@@ -27,9 +27,9 @@ const Navbar = () => {
      </div>
      <div className="sub-nav-container" style={{transform: !navToggleVal ? "translateX(-300px)" : "translateX(0px)"}}>
          <ul className="sub-nav-list">
-         <li> <Link className='sub-nav-link poppins-normal' to={"/"}>Home</Link> </li>
-         <li> <Link className='sub-nav-link poppins-normal' to={"/about"}>About</Link> </li>
-         <li> <Link className='sub-nav-link poppins-normal' to={"/products"}>All Products</Link> </li>
+         <li> <Link  className='sub-nav-link poppins-normal' onClick={()=>setNavToggleVal(!navToggleVal)} to={"/"}>Home</Link> </li>
+         <li> <Link  className='sub-nav-link poppins-normal' onClick={()=>setNavToggleVal(!navToggleVal)} to={"/about"}>About</Link> </li>
+         <li> <Link  className='sub-nav-link poppins-normal' onClick={()=>setNavToggleVal(!navToggleVal)} to={"/products"}>All Products</Link> </li>
          </ul>
      </div>
     </nav>

@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 
 import About from './Pages/About/About'
 import AllProducts from './Pages/AllProducts/AllProducts'
@@ -10,7 +10,12 @@ import Footer from './Components/Footer'
 import Cart from './Pages/Cart/Cart'
 
 function App() {
+  
+  const location = useLocation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   return (
      <>
      <Navbar/>

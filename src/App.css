@@ -229,4 +229,13 @@ footer {
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
   }
+  .footer-bottom{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .footer-bottom p{
+    padding-top: 15px;
+  }
 }
