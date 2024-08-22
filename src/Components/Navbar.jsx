@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaCartShopping } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { IoCloseSharp } from "react-icons/io5";
+import { BiMenu } from "react-icons/bi";
 const Navbar = () => {
   let [navToggleVal, setNavToggleVal] = useState(false);
   return (
@@ -21,16 +23,14 @@ const Navbar = () => {
 
       {/* cart -------- */}
       <a href="#" className='nav-cart'> <FaCartShopping /> </a>
+      <button className='btn nav-toggler' onClick={()=>{setNavToggleVal(!navToggleVal)}}> {!navToggleVal ? <BiMenu /> :  <IoCloseSharp /> }   </button>
      </div>
-     <div className="sub-nav-container">
-        <div className="sub-nav-toggler" onClick={()=> setNavToggleVal(!navToggleVal) }>
-        <button className='kanit-semibold btn'> Menu &nbsp; <GiHamburgerMenu /></button>
-        </div>
-        <ul className="sub-nav-list" style={{height: navToggleVal ? "140px" : "0px"}}>
-        <li> <Link className='sub-nav-link poppins-normal' to={"/"}>Home</Link> </li>
+     <div className="sub-nav-container" style={{transform: !navToggleVal ? "translateX(-300px)" : "translateX(0px)"}}>
+         <ul className="sub-nav-list">
+         <li> <Link className='sub-nav-link poppins-normal' to={"/"}>Home</Link> </li>
          <li> <Link className='sub-nav-link poppins-normal' to={"/about"}>About</Link> </li>
          <li> <Link className='sub-nav-link poppins-normal' to={"/products"}>All Products</Link> </li>
-        </ul>
+         </ul>
      </div>
     </nav>
   )
