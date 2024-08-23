@@ -18,7 +18,7 @@ const Hero = () => {
   }, [imgList.length]);
 
   return (
-    <div className='hero' style={{backgroundImage: `url('${imgList[currentImg]}')`}}>
+    <div className='hero' style={{backgroundImage: `linear-gradient(180deg, rgba(255, 69, 0, 0.1), rgba(255, 69, 0, 0.2)),url('${imgList[currentImg]}')`}}>
     </div>
   );
 }

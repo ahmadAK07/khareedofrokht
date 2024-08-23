@@ -13,7 +13,7 @@
 }
 ::selection{
   background: white;
-  color: var(--primary-color);
+  color: var(--pr);
 }
 .kanit-bold {
   font-family: "Kanit", sans-serif;

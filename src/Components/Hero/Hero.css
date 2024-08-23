@@ -4,6 +4,7 @@
     background-position: center;
     background-size: cover;
     transition: all .5s;
+    background-attachment: fixed;
 }
 @media screen and (max-width: 769px) {
     .hero{

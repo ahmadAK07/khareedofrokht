@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaCartShopping } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
 import { BiMenu } from "react-icons/bi";
+import CartContext from '../Context/CartContext';
 const Navbar = () => {
+  let {cartItems} = useContext(CartContext);
   let [navToggleVal, setNavToggleVal] = useState(false);
   return (
     <nav>
@@ -22,7 +24,7 @@ const Navbar = () => {
 
 
       {/* cart -------- */}
-      <Link to={"cart"} className='nav-cart'> <FaCartShopping /> </Link>
+      <Link to={"cart"} className='nav-cart' > <FaCartShopping /> <span className='nav-cart__count'>{Array.from(cartItems).length}</span> </Link>
       <button className='btn nav-toggler' onClick={()=>{setNavToggleVal(!navToggleVal)}}> {!navToggleVal ? <BiMenu /> :  <IoCloseSharp /> }   </button>
      </div>
      <div className="sub-nav-container" style={{transform: !navToggleVal ? "translateX(-300px)" : "translateX(0px)"}}>
